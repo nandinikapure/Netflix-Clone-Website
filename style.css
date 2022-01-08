@@ -1,0 +1,223 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ :root {
+     --red: #dc030f;
+ }
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     text-transform: initial;
+ }
+ 
+ body {
+     background-color: black;
+     color: white;
+     font-family: 'Poppins', sans-serif;
+ }
+ 
+ .navbar {
+     position: absolute;
+     top: 0;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     padding: 3% 5%;
+     z-index: 10;
+ }
+ 
+ .navbar__brand {
+     width: 100px;
+     height: 100%;
+ }
+ 
+ .brand__logo {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .languages__drop__down {
+     background: transparent;
+     border: none;
+     color: white;
+ }
+ 
+ .languages__drop__down:focus {
+     outline: none;
+ }
+ 
+ .dropdown__container {
+     border: 1px solid white;
+     padding: 0.1rem 0.2rem;
+     border-radius: 3px;
+     background: rgba(0, 0, 0, 0.4);
+ }
+ 
+ .signin__button {
+     background-color: var(--red);
+     border: 1px solid var(--red);
+     padding: 0.3rem 0.4rem;
+     border-radius: 3px;
+     font-size: 16px;
+     color: white;
+ }
+ 
+ .navbar__nav__items {
+     display: flex;
+     gap: .7rem;
+ }
+ 
+ .hero__bg__img__container {
+     width: 100%;
+     height: 85vh;
+ }
+ 
+ .hero__bg__img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ 
+ .hero__bg__overlay {
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 85vh;
+     background: rgba(0, 0, 0, 0.4);
+     background-image: linear-gradient( to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+ }
+ 
+ .hero__card {
+     position: absolute;
+     top: 20%;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+ 
+ .hero__title {
+     font-weight: 600;
+     font-size: 1.8rem;
+ }
+ 
+ .hero__subtitle,
+ .hero__description {
+     font-weight: 500;
+     font-size: 1rem;
+ }
+ 
+ .email__input {
+     border: none;
+     background: transparent;
+     width: 100%;
+     height: 100%;
+     padding-left: 7px;
+ }
+ 
+ .email__form__container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+ }
+ 
+ .form__container {
+     background-color: white;
+     width: 90%;
+     height: 48px;
+     position: relative;
+ }
+ 
+ .email__label {
+     color: black;
+     position: absolute;
+     top: 28%;
+     left: 2%;
+     font-size: 13px;
+     color: rgb(153, 149, 149);
+     transition: 0.5s;
+ }
+ 
+ .email__input:focus+.email__label {
+     top: 0.2rem;
+     font-size: 10px;
+ }
+ 
+ .email__input:not(:placeholder-shown).email__input:not(:focus)+.email__label {
+     top: 0.2rem;
+     font-size: 10px;
+ }
+ 
+ .email__input:focus-visible {
+     outline: none;
+ }
+ 
+ .primary__button {
+     background-color: #dc030f;
+     border: 1px solid #dc030f;
+     color: white;
+     padding: 0.6rem 1rem;
+     border-radius: 2px;
+     font-size: 15.5px;
+     letter-spacing: 1px;
+ }
+ /* medium devices */
+ 
+ @media(min-width: 768px) {
+     .hero__bg__img__container {
+         height: 100vh;
+     }
+     .hero__bg__overlay {
+         height: 100vh;
+     }
+     .hero__card {
+         top: 46%;
+         left: 30%;
+         transform: translate(-20%, -20%);
+     }
+     .hero__title {
+         font-size: 3rem;
+     }
+     .hero__subtitle,
+     .hero__description {
+         font-weight: 500;
+         font-size: 1.5rem;
+     }
+ }
+ /* laptop devices  */
+ 
+ @media(min-width: 1024px) {
+     .navbar {
+         padding: 2% 5%;
+     }
+     .navbar__brand {
+         width: 140px;
+     }
+     .dropdown__container {
+         padding: 0.2rem 0.3rem;
+         font-size: 16px;
+     }
+     .signin__button {
+         padding: 0.4rem 0.8rem;
+         font-size: 16px;
+     }
+     .navbar__nav__items {
+         gap: 30px;
+     }
+     .hero__card {
+         top: 55%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+     }
+     .hero__description {
+         /* font-weight: 400; */
+         font-size: 1.1rem;
+     }
+ }
+ /* large screen devices */
+ 
+ @media(min-width:1254px) {}
+ 
+ @media(min-width:1254px) {}
